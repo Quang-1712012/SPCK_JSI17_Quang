@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MineOS</title>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span>Current for Java 1.21 & Bedrock</span>
+        <span>Blog　 About　 🌙　 EN (US)</span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <div class="header-inner">
+
+            <nav class="navigation">
+                <a href="index.html" class="nav-link active">MINEOS</a>
+                <a href="functionality/tools.html" class="nav-link">🧰 Tools</a>
+                <a href="functionality/items.html" class="nav-link">⛏ Items</a>
+                <a href="functionality/blocks.html" class="nav-link">🟫 Blocks</a>
+                <a href="functionality/mobs.html" class="nav-link">🐷 Mobs</a>
+                <a href="functionality/world.html" class="nav-link">🌳 World</a>
+            </nav>
+
+            <button class="header-search" onclick="document.getElementById('searchInput').focus()">
+                ⌕ Search
+            </button>
+            <a id="mc-link" href="login.html" class="mc-link">
+                <span class="mc-link-icon">🔑</span>
+                Login
+            </a>
+
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <main>
+        <section class="hero">
+
+            <div class="hero-background"></div>
+
+            <div class="hero-content">
+
+                <h1>
+                    Find any Minecraft item, mob, block or biome
+                </h1>
+
+                <p class="hero-description">
+                    Search Minecraft items, mobs, blocks, biomes and
+                    structures — crafting recipes, drops, trades and stats.
+                    Everything you need in one place.
+                </p>
+
+                <form class="search-box" id="searchForm">
+                    <span class="search-icon">⌕</span>
+
+                    <input type="search" id="searchInput" placeholder="Search an item, mob or block — or paste a seed"
+                        autocomplete="off">
+                </form>
+
+            </div>
+
+            <!-- SEED MAP -->
+            <div class="seed-card" id="world">
+
+                <h2>🗺️ Seed Map</h2>
+
+                <p>
+                    Preview any seed: biomes, structures, slime chunks
+                    and spawn — across the Overworld, Nether and End.
+                </p>
+
+                <a href="#tools" class="primary-button">
+                    Open Seed Map →
+                </a>
+
+            </div>
+
+        </section>
+
+        <!-- TOOLS -->
+        <section class="tools-section" id="tools">
+
+            <div class="section-heading">
+                <span class="section-label">TOOLS</span>
+
+                <span class="section-description">
+                    In your browser, for Java and Bedrock — no downloads.
+                </span>
+            </div>
+
+            <div class="tools-grid">
+
+                <a href="#seed-finder" class="tool-card">
+                    <div class="tool-icon">🧭</div>
+                    <div>
+                        <h3>Minecraft Seed Finder</h3>
+                        <p>Discover interesting worlds and seeds.</p>
+                    </div>
+                </a>
+
+                <a href="#best-seeds" class="tool-card">
+                    <div class="tool-icon">💎</div>
+                    <div>
+                        <h3>Best Minecraft Seeds</h3>
+                        <p>Explore worlds with unique terrain.</p>
+                    </div>
+                </a>
+
+                <a href="#ore-finder" class="tool-card">
+                    <div class="tool-icon">🔷</div>
+                    <div>
+                        <h3>Ore Finder</h3>
+                        <p>Learn where ores generate.</p>
+                    </div>
+                </a>
+
+                <a href="#structure-finder" class="tool-card">
+                    <div class="tool-icon">🏠</div>
+                    <div>
+                        <h3>Structure Finder</h3>
+                        <p>Discover structures in Minecraft.</p>
+                    </div>
+                </a>
+
+                <a href="#items" class="tool-card" id="items">
+                    <div class="tool-icon">⚔️</div>
+                    <div>
+                        <h3>Item Database</h3>
+                        <p>Browse items, recipes and properties.</p>
+                    </div>
+                </a>
+
+                <a href="#blocks" class="tool-card" id="blocks">
+                    <div class="tool-icon">🧱</div>
+                    <div>
+                        <h3>Block Database</h3>
+                        <p>Find information about blocks.</p>
+                    </div>
+                </a>
+
+                <a href="#mobs" class="tool-card" id="mobs">
+                    <div class="tool-icon">🐉</div>
+                    <div>
+                        <h3>Mob Database</h3>
+                        <p>Explore mobs, drops and behavior.</p>
+                    </div>
+                </a>
+
+                <a href="#enchantments" class="tool-card">
+                    <div class="tool-icon">✨</div>
+                    <div>
+                        <h3>Enchantment Guide</h3>
+                        <p>Understand enchantments and effects.</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        Minecraft Search UI Demo · Built with HTML & CSS
+    </footer>
+
+    <!-- SEARCH INTERACTION -->
+    <script>
+        const searchForm = document.getElementById("searchForm");
+        const searchInput = document.getElementById("searchInput");
+
+        searchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const keyword = searchInput.value.trim();
+
+            if (!keyword) {
+                searchInput.focus();
+                return;
+            }
+
+            alert("Bạn đang tìm kiếm: " + keyword);
+
+            // Có thể thay alert bằng chức năng tìm kiếm dữ liệu Minecraft.
+        });
+    </script>
+
+</body>
+
+</html>

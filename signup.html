@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#151617">
+    <title>MineOS — Tạo tài khoản</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/auth.js"></script>
+</head>
+
+<body>
+
+    <div class="top-bar">
+        <span>Current for Java 1.21 & Bedrock</span>
+        <span>Blog　 About　 🌙　 EN (US)</span>
+    </div>
+    <header class="header">
+        <div class="header-inner">
+
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">MINEOS</a>
+                <a href="functionality/tools.html" class="nav-link">🧰 Tools</a>
+                <a href="functionality/items.html" class="nav-link">⛏ Items</a>
+                <a href="functionality/blocks.html" class="nav-link">🟫 Blocks</a>
+                <a href="functionality/mobs.html" class="nav-link">🐷 Mobs</a>
+                <a href="functionality/world.html" class="nav-link">🌳 World</a>
+            </nav>
+
+            <button class="header-search" onclick="document.getElementById('searchInput').focus()">
+                ⌕ Search
+            </button>
+            <a id="mc-link" href="login.html" class="mc-link">
+                <span class="mc-link-icon">🔑</span>
+                Login
+            </a>
+
+        </div>
+    </header>
+
+    <main class="auth-layout signup-layout">
+        <section class="auth-panel">
+            <div class="auth-tabs" role="tablist" aria-label="Tài khoản">
+                <a class="auth-tab" href="login.html">↪ &nbsp; Đăng nhập</a>
+                <a class="auth-tab active" href="signup.html" aria-current="page">＋ &nbsp; Tạo tài khoản</a>
+            </div>
+
+            <div class="panel-heading">
+                <p class="eyebrow">BẮT ĐẦU HÀNH TRÌNH</p>
+                <h1>Tạo tài khoản <span>MineOS</span></h1>
+                <p class="subheading">Tạo tài khoản để bắt đầu lưu tiến trình của bạn.</p>
+            </div>
+
+            <form id="signup-form" class="auth-form">
+                <label for="signup-name">TÊN HIỂN THỊ</label>
+                <input id="signup-name" name="displayName" type="text" placeholder="Tên của bạn" autocomplete="nickname"
+                    required maxlength="40">
+
+                <label for="signup-email">EMAIL</label>
+                <input id="signup-email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+                    required>
+
+                <label for="signup-password">MẬT KHẨU</label>
+                <div class="password-wrap">
+                    <input id="signup-password" name="password" type="password" placeholder="Ít nhất 6 ký tự"
+                        autocomplete="new-password" required minlength="6">
+                    <button class="show-password" type="button" data-toggle-password="signup-password"
+                        aria-label="Hiện mật khẩu">Hiện</button>
+                </div>
+
+                <label for="signup-confirm">XÁC NHẬN MẬT KHẨU</label>
+                <div class="password-wrap">
+                    <input id="signup-confirm" name="confirmPassword" type="password" placeholder="Nhập lại mật khẩu"
+                        autocomplete="new-password" required minlength="6">
+                    <button class="show-password" type="button" data-toggle-password="signup-confirm"
+                        aria-label="Hiện mật khẩu">Hiện</button>
+                </div>
+
+                <button class="primary-button submit-button" type="submit">
+                    <span>Tạo tài khoản</span><span aria-hidden="true">→</span>
+                </button>
+                <p id="signup-message" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="divider"><span>HOẶC</span></div>
+            <button id="google-signup" class="google-button" type="button">
+                <span class="google-g" aria-hidden="true">G</span> Đăng ký với Google
+            </button>
+            <p class="terms">Chỉ tạo tài khoản khi bạn đã đọc và đồng ý với các điều khoản sử dụng của MineOS.</p>
+            <p class="switch-prompt">Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        </section>
+
+        <aside class="benefits-panel">
+            <p class="eyebrow">TẠO TÀI KHOẢN</p>
+            <h2>Thiết lập hồ sơ.<br><span>Bắt đầu khám phá.</span></h2>
+            <p class="benefits-intro">Thông tin tài khoản được xử lý bởi Firebase Authentication.</p>
+            <div class="benefit">
+                <span class="pixel-icon">✓</span>
+                <div>
+                    <h3>Xác thực an toàn</h3>
+                    <p>Firebase xử lý thông tin đăng nhập thay vì tự lưu mật khẩu trong website.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <span class="pixel-icon">▦</span>
+                <div>
+                    <h3>Hồ sơ riêng</h3>
+                    <p>Tên hiển thị được lưu cùng hồ sơ xác thực của tài khoản.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <span class="pixel-icon">＋</span>
+                <div>
+                    <h3>Sẵn sàng mở rộng</h3>
+                    <p>Có thể bổ sung lưu kết quả học tập bằng Cloud Firestore sau này.</p>
+                </div>
+            </div>
+            <div class="free-note"><strong>LƯU Ý</strong><br>Không dùng tài khoản thật trên bản demo chưa cấu hình bảo
+                mật và miền triển khai.</div>
+        </aside>
+    </main>
+</body>
+
+</html>

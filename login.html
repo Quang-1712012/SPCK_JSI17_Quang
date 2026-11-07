@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#151617">
+    <title>MineOS — Đăng nhập</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/auth.js"></script>
+</head>
+
+<body>
+    <div class="top-bar">
+        <span>Current for Java 1.21 & Bedrock</span>
+        <span>Blog　 About　 🌙　 EN (US)</span>
+    </div>
+    <header class="header">
+        <div class="header-inner">
+
+            <nav class="navigation">
+                <a href="index.html" class="nav-link">MINEOS</a>
+                <a href="functionality/tools.html" class="nav-link">🧰 Tools</a>
+                <a href="functionality/items.html" class="nav-link">⛏ Items</a>
+                <a href="functionality/blocks.html" class="nav-link">🟫 Blocks</a>
+                <a href="functionality/mobs.html" class="nav-link">🐷 Mobs</a>
+                <a href="functionality/world.html" class="nav-link">🌳 World</a>
+            </nav>
+
+            <button class="header-search" onclick="document.getElementById('searchInput').focus()">
+                ⌕ Search
+            </button>
+            <a id="mc-link" href="login.html" class="mc-link">
+                <span class="mc-link-icon">🔑</span>
+                Login
+            </a>
+
+        </div>
+    </header>
+
+    <main class="auth-layout">
+        <section class="auth-panel">
+            <div class="auth-tabs" role="tablist" aria-label="Tài khoản">
+                <a class="auth-tab active" href="login.html" aria-current="page">↪ &nbsp; Đăng nhập</a>
+                <a class="auth-tab" href="signup.html">＋ &nbsp; Tạo tài khoản</a>
+            </div>
+
+            <div class="panel-heading">
+                <p class="eyebrow">CHÀO MỪNG TRỞ LẠI</p>
+                <h1>Đăng nhập <span>MineOS</span></h1>
+                <p class="subheading">Đăng nhập để tiếp tục hành trình Minecraft của bạn.</p>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <label for="login-email">EMAIL</label>
+                <input id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email"
+                    required>
+
+                <div class="label-row">
+                    <label for="login-password">MẬT KHẨU</label>
+                    <button class="text-button" type="button" id="forgot-password">Quên mật khẩu?</button>
+                </div>
+                <div class="password-wrap">
+                    <input id="login-password" name="password" type="password" placeholder="Nhập mật khẩu"
+                        autocomplete="current-password" required minlength="6">
+                    <button class="show-password" type="button" data-toggle-password="login-password"
+                        aria-label="Hiện mật khẩu">Hiện</button>
+                </div>
+
+                <button class="primary-button submit-button" type="submit">
+                    <span>Đăng nhập</span><span aria-hidden="true">→</span>
+                </button>
+                <p id="login-message" class="form-message" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="divider"><span>HOẶC</span></div>
+            <button id="google-login" class="google-button" type="button">
+                <span class="google-g" aria-hidden="true">G</span> Tiếp tục với Google
+            </button>
+            <p class="terms">Khi tiếp tục, bạn đồng ý với các điều khoản sử dụng và chính sách quyền riêng tư của
+                MineOS.</p>
+            <p class="switch-prompt">Chưa có tài khoản? <a href="signup.html">Tạo tài khoản</a></p>
+        </section>
+
+        <aside class="benefits-panel">
+            <p class="eyebrow">MINEOS ACCOUNT</p>
+            <h2>Một tài khoản.<br><span>Nhiều khả năng.</span></h2>
+            <p class="benefits-intro">Đăng nhập để lưu lại tiến trình và cá nhân hóa trải nghiệm của bạn.</p>
+            <div class="benefit">
+                <span class="pixel-icon">▦</span>
+                <div>
+                    <h3>Lưu tiến trình</h3>
+                    <p>Giữ lại kết quả bài kiểm tra và hoạt động học tập của bạn.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <span class="pixel-icon">⌖</span>
+                <div>
+                    <h3>Dữ liệu cá nhân</h3>
+                    <p>Chuẩn bị nền tảng cho các tùy chọn riêng theo tài khoản.</p>
+                </div>
+            </div>
+            <div class="benefit">
+                <span class="pixel-icon">◆</span>
+                <div>
+                    <h3>Đồng bộ trải nghiệm</h3>
+                    <p>Thiết kế để mở rộng thêm tính năng trong các phiên bản sau.</p>
+                </div>
+            </div>
+            <div class="free-note"><strong>MIỄN PHÍ &amp; ĐƠN GIẢN</strong><br>Đăng nhập chỉ là bước xác thực. Hãy cấu
+                hình
+                quyền truy cập dữ liệu an toàn trong Firebase.</div>
+        </aside>
+    </main>
+</body>
+
+</html>

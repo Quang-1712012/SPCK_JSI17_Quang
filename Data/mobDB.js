@@ -1,0 +1,1 @@
+//https://github.com/PrismarineJS/minecraft-data/tree/master/data/pc/1.21.10/entities.json?utm_source=chatgpt.com

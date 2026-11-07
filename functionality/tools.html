@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>MineOS</title>
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <span>Current for Java 1.21 & Bedrock</span>
+        <span>Blog　 About　 🌙　 EN (US)</span>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header class="header">
+        <div class="header-inner">
+
+            <nav class="navigation">
+                <a href="../index.html" class="nav-link">MINEOS</a>
+                <a href="tools.html" class="nav-link active">🧰 Tools</a>
+                <a href="items.html" class="nav-link">⛏ Items</a>
+                <a href="blocks.html" class="nav-link">🟫 Blocks</a>
+                <a href="mobs.html" class="nav-link">🐷 Mobs</a>
+                <a href="world.html" class="nav-link">🌳 World</a>
+            </nav>
+
+            <button class="header-search" onclick="document.getElementById('searchInput').focus()">
+                ⌕ Search
+            </button>
+            <a id="mc-link" href="login.html" class="mc-link">
+                <span class="mc-link-icon">🔑</span>
+                Login
+            </a>
+
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        Minecraft Search UI Demo · Built with HTML & CSS
+    </footer>
+
+    <!-- SEARCH INTERACTION -->
+    <script>
+        const searchForm = document.getElementById("searchForm");
+        const searchInput = document.getElementById("searchInput");
+
+        searchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const keyword = searchInput.value.trim();
+
+            if (!keyword) {
+                searchInput.focus();
+                return;
+            }
+
+            alert("Bạn đang tìm kiếm: " + keyword);
+
+            // Có thể thay alert bằng chức năng tìm kiếm dữ liệu Minecraft.
+        });
+    </script>
+
+</body>
+
+</html>
